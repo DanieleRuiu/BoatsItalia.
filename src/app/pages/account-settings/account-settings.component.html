@@ -1,1 +1,43 @@
-<p>account-settings works!</p>
+
+<div class="main-content">
+  <div class="container">
+    <div class="profile-settings">
+
+        <header class="profile-settings-header">
+          <h1 class="profile-settings-title">Account settings</h1>
+          <a class="profile-settings-close-link" href="#"></a>
+        </header>
+
+        <div class="profile-settings-form-body">
+
+          <div class="profile-settings-form-group">
+            <label class="profile-settings-form-label" for="settings-username-input" >Username</label>
+            <input class="profile-settings-form-field" type="text" name="username" id="settings-username-input" placeholder="Inserisci il tuo username" required autocomplete="off">
+          </div>
+          <div class="profile-settings-form-row">
+            <div class="profile-settings-form-group">
+              <label class="profile-settings-form-label" for="settings-first-name-input">Nome</label>
+              <input class="profile-settings-form-field" type="text" name="first_name" id="settings-first-name-input" placeholder="Inserisci il tuo nome" required autocomplete="off">
+            </div>
+            <div class="profile-settings-form-group">
+              <label class="profile-settings-form-label" for="settings-last-name-input">Cognome</label>
+              <input class="profile-settings-form-field" type="text" name="last_name" id="settings-last-name-input" placeholder="Inserisci il tuo cognome" required autocomplete="off">
+            </div>
+          </div>
+          <div class="profile-settings-form-group">
+            <label class="profile-settings-form-label" for="settings-email-input">Email</label>
+            <input class="profile-settings-form-field" type="email" name="email" id="settings-email-input" placeholder="Inserisci la tua email" pattern="^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$" required autocomplete="off">
+          </div>
+
+        </div>
+
+        <footer class="profile-settings-form-actions">
+
+          <button class="profile-settings-form-action" type="submit">Salva</button>
+        </footer>
+
+    </div>
+  </div>
+</div>
+
+

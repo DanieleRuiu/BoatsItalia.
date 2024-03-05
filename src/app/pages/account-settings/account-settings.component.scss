@@ -1,0 +1,96 @@
+
+.main-content {
+  flex-grow: 1;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.profile-settings {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fdde2e;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.profile-settings-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+}
+
+.profile-settings-title {
+  margin: 0;
+  font-size: 20px;
+}
+
+.profile-settings-close-link {
+  display: flex;
+}
+
+.profile-settings-form-body {
+  padding: 60px 30px 40px;
+  background-color: #fff;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+}
+
+.profile-settings-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.profile-settings-form-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-settings-form-group {
+  flex: 0 0 48%; /* Modifica per adattare la larghezza del gruppo */
+}
+
+.profile-settings-form-group:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.profile-settings-form-label {
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #666;
+  text-transform: uppercase;
+}
+
+.profile-settings-form-field {
+  width: 100%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border: 0;
+  border-bottom: 1px solid #555;
+}
+
+.profile-settings-form-field-textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.profile-settings-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 40px;
+}
+
+.profile-settings-form-action {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.profile-settings-form-action:not(:last-child) {
+  margin-right: 40px;
+}
