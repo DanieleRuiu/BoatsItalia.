@@ -1,0 +1,45 @@
+$root-font-family: 'Lobster';
+
+.navbar {
+  background-color: #ffffff;
+  color: white;
+  .navbar-brand {
+    color: #025879;
+    font-size: 2em;
+    font-family: $root-font-family;
+    font-weight: 700;
+    &:hover {
+      color: #0d47a1;
+    }
+  }
+  .logo {
+    width: 100px;
+    height: 100px;
+  }
+
+ .icon {
+  color: #02748c;
+
+}
+  .navbar-toggler {
+    border-color: white
+  }
+
+  .navbar-toggler-icon {
+    background-color: white;
+  }
+
+  .nav-link {
+    color: #02748c ;
+    font-size: 1.1em;
+    font-weight: 500;
+    &:hover {
+      color: #0d47a1;
+    }
+  }
+
+
+}
+// .sea-gradient {
+//   background: linear-gradient(to right,#48c5ce42 0%, #6dd5ed 50%, #b3dfee 100%);
+//}
