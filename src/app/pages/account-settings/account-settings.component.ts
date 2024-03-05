@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrl: './account-settings.component.scss'
 })
 export class AccountSettingsComponent {
+deleteAccount() {
+throw new Error('Method not implemented.');
+}
+favorites: any;
 
 }
