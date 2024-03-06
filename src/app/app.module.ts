@@ -14,6 +14,7 @@ import { SellerAnnouncementComponent } from './pages/seller-announcement/seller-
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BuyerAnnouncementComponent } from './pages/buyer-announcement/buyer-announcement.component';
+import { Error404Component } from './pages/error-404/error-404.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { BuyerAnnouncementComponent } from './pages/buyer-announcement/buyer-ann
     SellerAnnouncementComponent,
     HeaderComponent,
     FooterComponent,
-    BuyerAnnouncementComponent
+    BuyerAnnouncementComponent,
+    Error404Component
   ],
   imports: [
     BrowserModule,

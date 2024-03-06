@@ -12,10 +12,10 @@ $root-font-family: 'Lobster';
       color: #0d47a1;
     }
   }
-  
+
 
  .icon {
-  color: #02748c;
+  color: black;
 
 }
   .navbar-toggler {
@@ -27,7 +27,7 @@ $root-font-family: 'Lobster';
   }
 
   .nav-link {
-    color: #02748c ;
+    color: black ;
     font-size: 1.1em;
     font-weight: 500;
     &:hover {
@@ -37,6 +37,4 @@ $root-font-family: 'Lobster';
 
 
 }
-// .sea-gradient {
-//   background: linear-gradient(to right,#48c5ce42 0%, #6dd5ed 50%, #b3dfee 100%);
-//}
+

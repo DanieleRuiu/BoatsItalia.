@@ -29,7 +29,7 @@ body{
 
 // Stile per il pulsante di ricerca
 .search__button {
-  padding: 10px 20px; // Spaziatura interna
+  padding: 10px ; // Spaziatura interna
   border: none; // Rimuovi il bordo
   border-radius: 5px; // Bordi arrotondati
   background-color: #007bff; // Colore di sfondo
@@ -92,11 +92,12 @@ background-color: white;
 }
 
 .icon{
-  margin-left: 1cm;
+
   fill: #3905f7;
   &:hover{
     cursor: pointer;
     color: #3905f7;
+    transition: color 0.3s ease;
   }
 
 }

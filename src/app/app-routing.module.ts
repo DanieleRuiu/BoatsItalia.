@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+
 import { Routes, RouterModule } from '@angular/router';
 import { AccountSettingsComponent } from './pages/account-settings/account-settings.component';
 import { FavouritesComponent } from './pages/favourites/favourites.component';
@@ -10,6 +11,7 @@ import { SearchComponent } from './pages/search/search.component';
 import { SellerComponent } from './pages/seller/seller.component';
 import { SellerAnnouncementComponent } from './pages/seller-announcement/seller-announcement.component';
 import { BuyerAnnouncementComponent } from './pages/buyer-announcement/buyer-announcement.component';
+import { Error404Component } from './pages/error-404/error-404.component';
 const routes: Routes = [
   { path: 'home', component: HomepageComponent },
   { path: 'account-settings', component: AccountSettingsComponent },
@@ -21,7 +23,8 @@ const routes: Routes = [
   { path: 'seller', component: SellerComponent },
   { path: 'seller-announcement', component: SellerAnnouncementComponent },
   { path: 'buyer-announcement', component: BuyerAnnouncementComponent},
-  { path: '**', redirectTo: 'home' }
+  { path: '404', component: Error404Component },
+  { path: '**', redirectTo: '404' }
 ];
 
 @NgModule({

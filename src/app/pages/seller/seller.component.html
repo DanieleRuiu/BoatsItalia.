@@ -1,17 +1,17 @@
-<h3>Crea una nuova inserzione</h3>
+<h3>Crea il tuo annuncio</h3>
 
 <form>
   <div class="form-group">
     <label for="title">Titolo</label>
-    <input type="text" class="form-control" id="title" formControlName="title">
+    <input type="text" class="form-control" id="title" formControlName="title" placeholder="Inserisci il titolo del tuo annuncio">
   </div>
   <div class="form-group">
     <label for="description">Descrizione</label>
-    <textarea class="form-control" id="description" formControlName="description"></textarea>
+    <textarea class="form-control" id="description" formControlName="description" placeholder="Inserisci una descrizione accurata"></textarea>
   </div>
   <div class="form-group">
     <label for="price">Prezzo</label>
-    <input type="number" class="form-control" id="price" formControlName="price">
+    <input type="number" class="form-control" id="price" formControlName="price" placeholder="Inserisci il prezzo">
   </div>
   <div class="form-group">
     <label for="image">Immagine</label>
@@ -19,7 +19,7 @@
   </div>
   <div class="form-group">
     <label for="category">Categoria</label>
-    <select class="form-control" id="category" formControlName="category">
+    <select class="form-control" id="category" formControlName="category" >
       <option>Barca a vela</option>
       <option>Barca a motore</option>
       <option>Moto d'acqua</option>
@@ -28,18 +28,21 @@
     </select>
   </div>
   <div class="form-group">
-    <label for="location">Stato</label>
-    <input type="text" class="form-control" id="location" formControlName="location">
+    <label for="location">Ubicazione</label>
+    <input type="text" class="form-control" id="location" formControlName="location" placeholder="Inserisci l'ubicazione">
+  </div>
+
+  <div class="form-group">
+    <label for="phone">Telefono</label>
+    <input type="text" class="form-control" id="phone" formControlName="phone" placeholder="inserisci il tuo numero di telefono">
   </div>
   <div class="form-group">
-    <label for="location">Regione</label>
-    <input type="text" class="form-control" id="location" formControlName="location">
+    <label for="email">Email</label>
+    <input type="email" class="form-control" id="email" formControlName="email" placeholder="Inserisci il tuo indirizzo email">
   </div>
-  <div class="form-group">
-    <label for="location">Provincia</label>
-    <input type="text" class="form-control" id="location" formControlName="location">
-  </div>
-  <button type="submit" class="btn btn-primary">Crea</button>
+
+
+  <button type="submit" class="btn btn-primary">Crea Annuncio</button>
 </form>
 
 
