@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './favourites.component.scss'
 })
 export class FavouritesComponent {
+  constructor() {}
+
 
 }

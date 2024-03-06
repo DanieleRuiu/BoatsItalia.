@@ -11,7 +11,7 @@ import { SellerComponent } from './pages/seller/seller.component';
 import { SellerAnnouncementComponent } from './pages/seller-announcement/seller-announcement.component';
 import { BuyerAnnouncementComponent } from './pages/buyer-announcement/buyer-announcement.component';
 const routes: Routes = [
-  { path: '', component: HomepageComponent },
+  { path: 'home', component: HomepageComponent },
   { path: 'account-settings', component: AccountSettingsComponent },
   { path: 'favourites', component: FavouritesComponent },
   { path: 'login', component: LoginComponent },
@@ -21,7 +21,7 @@ const routes: Routes = [
   { path: 'seller', component: SellerComponent },
   { path: 'seller-announcement', component: SellerAnnouncementComponent },
   { path: 'buyer-announcement', component: BuyerAnnouncementComponent},
-  { path: '**', redirectTo: '/' }
+  { path: '**', redirectTo: 'home' }
 ];
 
 @NgModule({

@@ -91,6 +91,15 @@ background-color: white;
   font-family: 'Lobster';
 }
 
+.icon{
+  margin-left: 1cm;
+  fill: #3905f7;
+  &:hover{
+    cursor: pointer;
+    color: #3905f7;
+  }
+
+}
 
 
 
