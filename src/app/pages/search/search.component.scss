@@ -1,93 +1,97 @@
-// Variabili per colori e spaziatura
-$primary-color: #007bff;
-$secondary-color: #6c757d;
-$border-color: #ced4da;
-$padding: 10px;
-
-// Stili per la barra di ricerca
-.search-container {
-    display: flex;
-    align-items: center;
-    margin-bottom: $padding;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  padding: 20px;
 }
 
-.search-input-container {
-    flex: 1;
-    margin-right: $padding;
+h3 {
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+form {
+  background-color: #f6f7f9;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(4, 235, 243, 0.1);
+  width: 50%;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.search-label {
-    display: none;
+.search-container, .filter-container {
+  background-color: #f6f7f9; /* Cambiamo il colore dello sfondo per adattarlo al form "Crea il tuo annuncio" */
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(4, 235, 243, 0.1);
+  margin-bottom: 20px;
 }
 
-.search-input {
-    width: 100%;
-    padding: 10px;
-    border: 2px solid $border-color;
-    border-radius: 5px;
-    font-size: 16px;
-    outline: none;
-
-    &::placeholder {
-        color: $secondary-color;
-    }
+.search-container .search-input-container {
+  margin-right: 20px;
 }
 
-.search-button {
-    padding: 10px 20px;
-    background-color: $primary-color;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-
-    &:hover {
-        background-color: darken($primary-color, 10%);
-    }
+.search-container .search-label {
+  margin-right: 10px;
+  font-size: 16px;
 }
 
-// Stili per i filtri
-.filter-container {
-    display: flex;
-    flex-wrap: wrap;
+.search-container .search-input {
+  padding: 10px; /* Abbiamo ridotto il padding per adattarlo allo stile del form */
+  border: 1px solid #ddd; /* Cambiamo il colore del bordo per adattarlo allo stile del form */
+  width: 100%; /* Modifichiamo la larghezza per occupare l'intera larghezza del contenitore */
+}
+
+.search-container .search-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 16px;
+}
+
+.search-container .search-button:hover {
+  background-color: #0056b3;
 }
 
 .filter-item {
-    margin-right: $padding;
-    margin-bottom: $padding;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
 }
 
 .filter-item label {
-    margin-right: 5px;
-    font-size: 16px;
+  margin-right: 10px;
+  font-size: 16px;
 }
 
 .filter-item input[type="text"],
 .filter-item input[type="number"],
 .filter-item select {
-    width: 150px;
-    padding: 10px;
-    border: 2px solid $border-color;
-    border-radius: 5px;
-    font-size: 16px;
-    outline: none;
-
-    &::placeholder {
-        color: $secondary-color;
-    }
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 5px;
+  font-size: 14px;
 }
 
 .filter-button {
-    padding: 10px 20px;
-    background-color: $primary-color;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 16px;
+}
 
-    &:hover {
-        background-color: darken($primary-color, 10%);
-    }
+.filter-button:hover {
+  background-color: #0056b3;
 }
