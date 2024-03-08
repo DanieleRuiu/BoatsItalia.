@@ -9,7 +9,7 @@ body{
 
 }
 .title {
-  font-size: 3.5rem;
+  font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 5rem;
   margin-top: 2rem;
@@ -153,11 +153,17 @@ html, body {
 }
 .custom-card
 {
-  height: 250px;
+  height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 30px;
+  width: auto;
+  &:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px 0 #3905f7;
+    transition: box-shadow 0.3s ease;
+  }
 }
 .card-title{
   padding: 12px;
@@ -166,6 +172,7 @@ html, body {
   color: white;
   font-size: 14px;
   border-radius: 30px;
+  font-weight: 700;
 
 }
 
