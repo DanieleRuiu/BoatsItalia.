@@ -1,40 +1,66 @@
 $root-font-family: 'Lobster';
 
+/* Stili di base per la barra di navigazione */
 .navbar {
   background-color: #ffffff;
   color: white;
+}
+
+/* Media query per smartphone (fino a 600px) */
+@media only screen and (max-width: 600px) {
   .navbar-brand {
-    color: #025879;
-    font-size: 2em;
-    font-family: $root-font-family;
-    font-weight: 700;
-    &:hover {
-      color: #0d47a1;
-    }
+    font-size: 1.5em; /* Riduci la dimensione del font per dispositivi mobili */
   }
-
-
- .icon {
-  color: black;
-
-}
-  .navbar-toggler {
-    border-color: white
-  }
-
-  .navbar-toggler-icon {
-    background-color: white;
-  }
-
   .nav-link {
-    color: black ;
-    font-size: 1.1em;
-    font-weight: 500;
-    &:hover {
-      color: #0d47a1;
-    }
+    font-size: 1em; /* Riduci la dimensione del font per dispositivi mobili */
   }
-
-
 }
 
+/* Media query per tablet (da 601px a 900px) */
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  /* Aggiungi qui eventuali regole per tablet */
+}
+
+/* Media query per laptop (da 901px a 1200px) */
+@media only screen and (min-width: 901px) and (max-width: 1200px) {
+  /* Aggiungi qui eventuali regole per laptop */
+}
+
+/* Media query per TV (da 1201px in su) */
+@media only screen and (min-width: 1201px) {
+  /* Aggiungi qui eventuali regole per TV */
+}
+
+/* Restanti stili rimangono invariati per tutti i tipi di schermi */
+.navbar-brand {
+  color: #025879;
+  font-size: 2em;
+  font-family: $root-font-family;
+  font-weight: 700;
+}
+
+.navbar-brand:hover {
+  color: #0d47a1;
+}
+
+.icon {
+  color: black;
+}
+
+.navbar-toggler {
+  border-color: white;
+}
+
+.navbar-toggler-icon {
+  background-color: white;
+}
+
+.nav-link {
+  color: black;
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #0d47a1;
+}

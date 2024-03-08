@@ -1,3 +1,4 @@
+/* Stile base */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -65,4 +66,43 @@ ul li {
 
 .description-text {
   color: #555;
+}
+
+/* Media query per smartphone */
+@media screen and (max-width: 576px) {
+  main {
+    padding: 10px;
+  }
+  .image-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .image-container img {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  .seller-details {
+    text-align: center;
+  }
+}
+
+/* Media query per tablet */
+@media screen and (min-width: 577px) and (max-width: 1024px) {
+  main {
+    padding: 15px;
+  }
+}
+
+/* Media query per laptop */
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  main {
+    padding: 20px;
+  }
+}
+
+/* Media query per tv */
+@media screen and (min-width: 1441px) {
+  main {
+    padding: 25px;
+  }
 }

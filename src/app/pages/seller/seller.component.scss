@@ -24,7 +24,106 @@ form {
   margin-bottom: 20px;
 }
 
-label {
+label {// Variabili
+  $button-width-mobile: 100%; // Larghezza del bottone per smartphone
+  $button-width-desktop: 20%; // Larghezza del bottone per laptop e tv
+
+  // Stili comuni
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    padding: 20px;
+  }
+
+  h3 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  form {
+    background-color: #f6f7f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(4, 235, 243, 0.1);
+    width: 50%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  label {
+    font-weight: bold;
+    color: #555;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  textarea,
+  select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    font-size: 14px;
+  }
+
+  input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 14px;
+  }
+
+  button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+    text-align: center; /* Aggiungi questa regola per centrare il bottone */
+    width: $button-width-mobile; /* Larghezza del bottone per smartphone */
+  }
+
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+
+  // Media query per smartphone (fino a 768px)
+  @media screen and (max-width: 768px) {
+    form {
+      width: 90%; // Riduci la larghezza del form per smartphone
+    }
+
+    button[type="submit"] {
+      width: $button-width-mobile; // Larghezza del bottone per smartphone
+    }
+  }
+
+  // Media query per tablet (da 769px a 1024px)
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    // Aggiungi qui eventuali regole CSS per tablet
+  }
+
+  // Media query per laptop e tv (da 1025px in su)
+  @media screen and (min-width: 1025px) {
+    form {
+      width: 50%; // Ripristina la larghezza originale del form per laptop e tv
+    }
+
+    button[type="submit"] {
+      width: $button-width-desktop; // Larghezza del bottone per laptop e tv
+    }
+  }
+
   font-weight: bold;
   color: #555;
 }

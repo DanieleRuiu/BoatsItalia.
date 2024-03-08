@@ -106,6 +106,63 @@ background-color: white;
 
 }
 
+/* Media query per smartphone (fino a 600px) */
+@media only screen and (max-width: 600px) {
+  .title {
+    font-size: 1.2rem;
+    width: 100%; /* Adatta la larghezza del titolo per schermi più piccoli */
+    margin-bottom: 3rem; /* Riduci lo spazio inferiore */
+    margin-top: 1rem; /* Riduci lo spazio superiore */
+  }
+
+  .search__input {
+    width: calc(100% - 90px); /* Adatta la larghezza del campo di input per schermi più piccoli */
+  }
+
+  .search__button {
+    margin-top: 10px; /* Aggiusta lo spazio tra il campo di input e il pulsante per schermi più piccoli */
+  }
+
+  .container-search,
+  .container-cards {
+    padding: 0.5cm; /* Riduci il padding per gli elementi principali */
+    margin-top: 0.5rem; /* Riduci lo spazio superiore per gli elementi principali */
+  }
+
+  .section-title {
+    font-size: 1.2rem; /* Riduci la dimensione del titolo per schermi più piccoli */
+    margin-bottom: 1rem; /* Riduci lo spazio inferiore per il titolo */
+    margin-top: 0.5rem; /* Riduci lo spazio superiore per il titolo */
+  }
+
+  .custom-card {
+    height: 250px; /* Riduci l'altezza delle card per adattarle a schermi più piccoli */
+  }
+
+  .card-title {
+    font-size: 12px; /* Riduci la dimensione del testo per schermi più piccoli */
+    padding: 8px; /* Riduci il padding per il titolo della card */
+    border-radius: 20px; /* Riduci il raggio dei bordi per il titolo della card */
+  }
+}
+
+/* Media query per tablet (da 601px a 900px) */
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  /* Aggiungi qui eventuali regole CSS per tablet */
+  .container {
+    padding: 30px;
+  }
+}
+
+/* Media query per laptop (da 901px a 1200px) */
+@media only screen and (min-width: 901px) and (max-width: 1200px) {
+  /* Aggiungi qui eventuali regole CSS per laptop */
+}
+
+/* Media query per TV (da 1201px in su) */
+@media only screen and (min-width: 1201px) {
+  /* Aggiungi qui eventuali regole CSS per TV */
+}
 
 
 /* for the pen */
@@ -173,6 +230,32 @@ html, body {
   font-size: 14px;
   border-radius: 30px;
   font-weight: 700;
+  &:hover{
+    cursor: pointer;
+    color: #1b0c52;
+    transition: color 0.3s ease;
+  }
 
+}
+.card-announcement-list{
+  padding: 1rem;
+  margin-top: 1rem;
+  background-color: white;
+  border-radius: 30px;
+
+  &:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px 0 #2674e9;
+    transition: box-shadow 0.3s ease;
+  }
+
+}
+
+.page-navigation-example{
+  &.hover{
+    cursor: pointer;
+    color: #3905f7;
+    transition: color 0.3s ease;
+  }
 }
 

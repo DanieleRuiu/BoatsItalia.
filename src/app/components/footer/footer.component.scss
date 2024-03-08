@@ -1,19 +1,49 @@
 
 $root-font-family: 'Lobster';
 
+/* Stili di base per .footer */
 .footer {
-  // background: linear-gradient(to right,#48c5ce42 0%, #6dd5ed 50%, #b3dfee 100%);
   color: white;
-  padding: px;
+  padding: 20px; /* Modifica la dimensione del padding come desideri */
+}
 
-  .footer-links {
-    color:#025879;
-    font-size: 1.1em;
-    font-weight: 500;
-    &:hover {
-      color: #0d47a1;
-    }
+/* Media query per smartphone (fino a 600px) */
+@media only screen and (max-width: 600px) {
+  .footer {
+    padding: 10px; /* Modifica la dimensione del padding per dispositivi mobili */
   }
+}
+
+/* Media query per tablet (da 601px a 900px) */
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  .footer {
+    padding: 15px; /* Modifica la dimensione del padding per tablet */
+  }
+}
+
+/* Media query per laptop (da 901px a 1200px) */
+@media only screen and (min-width: 901px) and (max-width: 1200px) {
+  .footer {
+    padding: 20px; /* Modifica la dimensione del padding per laptop */
+  }
+}
+
+/* Media query per TV (da 1201px in su) */
+@media only screen and (min-width: 1201px) {
+  .footer {
+    padding: 30px; /* Modifica la dimensione del padding per TV */
+  }
+}
+
+/* Stili per .footer-links rimangono gli stessi per tutti i tipi di schermi */
+.footer-links {
+  color: #025879;
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+.footer-links:hover {
+  color: #0d47a1;
 }
 
 
