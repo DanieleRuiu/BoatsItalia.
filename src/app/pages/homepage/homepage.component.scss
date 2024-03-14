@@ -223,6 +223,7 @@ html, body {
   }
 }
 .card-title{
+  
   padding: 12px;
   background-color: #2674e9;
   text-align: center;
@@ -258,4 +259,47 @@ html, body {
     transition: color 0.3s ease;
   }
 }
+/* Media query per telefoni (fino a 600px) */
+@media only screen and (max-width: 600px) {
+  .title {
+    font-size: 1.2rem;
+    width: 100%; /* Adatta
+    la larghezza del titolo per schermi più piccoli */
+    margin-bottom: 3rem; /* Riduci lo spazio inferiore */
+    margin-top: 1rem; /* Riduci lo spazio superiore */
+  }
 
+
+}
+
+/* Media query per tablet (da 601px a 900px) */
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  /* Aggiungi qui eventuali regole CSS per tablet */
+}
+
+/* Media query per laptop (da 901px a 1200px) */
+@media only screen and (min-width: 901px) and (max-width: 1200px) {
+  /* Aggiungi qui eventuali regole CSS per laptop */
+  .card-title{
+
+    padding: 12px;
+    background-color: #2674e9;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    border-radius: 30px;
+    font-weight: 700;
+    &:hover{
+      cursor: pointer;
+      color: #1b0c52;
+      transition: color 0.3s ease;
+    }
+  }
+}
+
+/* Media query per TV (da 1201px in su) */
+@media only screen and (min-width: 1201px) {
+  /* Aggiungi qui eventuali regole CSS per TV */
+
+
+}

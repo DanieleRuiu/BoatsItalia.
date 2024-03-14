@@ -9,26 +9,91 @@ $root-font-family: 'Lobster';
 /* Media query per smartphone (fino a 600px) */
 @media only screen and (max-width: 600px) {
   .navbar-brand {
-    font-size: 1.5em; /* Riduci la dimensione del font per dispositivi mobili */
+    font-size: 0.5em; /* Riduci la dimensione del font per dispositivi mobili */
   }
   .nav-link {
     font-size: 1em; /* Riduci la dimensione del font per dispositivi mobili */
   }
+  .navbar-toggler {
+    font-size: 1.5em; /* Riduci la dimensione del font per dispositivi mobili */
 }
+  .navbar-nav {
+    flex-direction: column; /* Imposta la direzione della flessione su colonna per dispositivi mobili */
+  }
+  .nav-item {
+    margin-bottom: 0.5rem; /* Riduci lo spazio tra i link per dispositivi mobili */
 
+}
+.logo {
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+  border: 2px solid #025879;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+}
 /* Media query per tablet (da 601px a 900px) */
 @media only screen and (min-width: 601px) and (max-width: 900px) {
   /* Aggiungi qui eventuali regole per tablet */
+  .logo {
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+  border: 2px solid #025879;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+  position: absolute;
+  top: 0;
+  left: 0;
+
 }
+
+
+}
+
 
 /* Media query per laptop (da 901px a 1200px) */
 @media only screen and (min-width: 901px) and (max-width: 1200px) {
-  /* Aggiungi qui eventuali regole per laptop */
+  /* Aggiungi qui eventuali regole per laptop */.logo {
+  width: 100px;
+  height: 100px;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+  border: 2px solid #025879;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+}
 }
 
 /* Media query per TV (da 1201px in su) */
 @media only screen and (min-width: 1201px) {
-  /* Aggiungi qui eventuali regole per TV */
+  /* Aggiungi qui eventuali regole per TV */.logo {
+  width: 100px;
+  height: 100px;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+  border: 2px solid #025879;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+}
 }
 
 /* Restanti stili rimangono invariati per tutti i tipi di schermi */
