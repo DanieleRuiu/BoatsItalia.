@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +16,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BuyerAnnouncementComponent } from './pages/buyer-announcement/buyer-announcement.component';
 import { Error404Component } from './pages/error-404/error-404.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
+
 
 @NgModule({
   declarations: [
@@ -31,11 +35,14 @@ import { Error404Component } from './pages/error-404/error-404.component';
     HeaderComponent,
     FooterComponent,
     BuyerAnnouncementComponent,
-    Error404Component
+    Error404Component,
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
