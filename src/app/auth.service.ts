@@ -8,11 +8,14 @@ import {Observable} from 'rxjs';
 })
 export class AuthService {
 
+   #outToken: string | undefined; // using # in order to declare a strictly private property
+
   constructor(private http: HttpClient) { }
 
   registerUser(user: any): Observable<any> {
+
     const headers = new HttpHeaders({
-      'Authorization': 'Bearer "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxNCIsInVzZXJJZCI6MTQsInVzZXJuYW1lIjoiQ29yZXR0YSIsImVtYWlsIjoiZXhhbXBsZUBtYWlsLml0IiwiaWF0IjoxNzEwNzcwMjkyLCJleHAiOjE3MTA3NzM4OTJ9.x8SyKmZlouOlXMtZkNNH1JhiYErPS9aX667lK8hyiL4"',
+      'Authorization': this.#outToken || '',
       'Content-Type': 'application/json'
     });
     return this.http.post ('http://localhost:8080/auth/register', user, {headers: headers});
@@ -25,7 +28,13 @@ login(email: string, password: string): Observable<any> {
   });
   const body = JSON.stringify({ email, password });
 
-  return this.http.post<any>('http://localhost:8080/auth/login', body, { headers });
+  const response = this.http.post<any>('http://localhost:8080/auth/login', body, { headers });
+  response.subscribe(
+    (data) => {
+      this.#outToken = data.token;
+    }
+  );
+  return response;
 }
 
 
