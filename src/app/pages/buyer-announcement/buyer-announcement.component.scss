@@ -51,10 +51,10 @@ ul li {
 }
 
 /* Personalizzazione degli elementi specifici */
-.model,
-.length,
-.year,
-.condition,
+
+
+
+.title,
 .price,
 .location,
 .name,
@@ -71,7 +71,8 @@ ul li {
 /* Media query per smartphone */
 @media screen and (max-width: 576px) {
   main {
-    padding: 10px;
+    padding: 15px;
+
   }
   .image-container {
     flex-direction: column;
@@ -84,6 +85,7 @@ ul li {
   .seller-details {
     text-align: center;
   }
+
 }
 
 /* Media query per tablet */

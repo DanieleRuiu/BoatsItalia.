@@ -37,5 +37,13 @@ login(email: string, password: string): Observable<any> {
   return response;
 }
 
+announcement (announcement: any): Observable<any> {
+  const headers = new HttpHeaders({
+    'Authorization': this.#outToken || '',
+    'Content-Type': 'application/json'
+  });
+  return this.http.post('http://localhost:8080/announcement', announcement, { headers });
 
 }
+
+  }
