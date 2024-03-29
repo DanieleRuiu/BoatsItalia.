@@ -18,6 +18,8 @@ export class RegisterComponent implements OnInit{
   });
   errorMessage: string | undefined;
 
+isRegistered=false;
+
   constructor(private authService: AuthService) {
 
   }
@@ -41,7 +43,8 @@ export class RegisterComponent implements OnInit{
     this.authService.registerUser(user).subscribe(
       (response) => {
         console.log('Risposta ricevuta:', response);
-        this.router.navigate(['/login']);
+        //this.router.navigate(['/login']);
+        this.isRegistered=true;
       },
       (error) => {
         console.error('Errore durante la richiesta:', error);

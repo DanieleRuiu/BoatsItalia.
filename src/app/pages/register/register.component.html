@@ -1,6 +1,6 @@
 
-<div id="background">
-  <div id="card">
+<div id="background" *ngIf="!isRegistered">
+  <div id="card" >
     <div class="page m-1">
       <h2>Inserisci i tuoi dati</h2>
       <form [formGroup]="registerForm">
@@ -31,3 +31,5 @@
     </div>
   </div>
 </div>
+
+<div *ngIf="isRegistered">Benvenuto</div>

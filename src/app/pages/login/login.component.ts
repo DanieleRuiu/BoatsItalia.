@@ -12,10 +12,14 @@ loginForm = new FormGroup({
     email: new FormControl<string>(''),
     password: new FormControl<string>(''),
 });
+
+
   constructor(private authService: AuthService) { }
 
   ngOnInit() {
   }
+
+  isLogged=false;
 
   login() {
     const email = this.loginForm.get('email')?.value;
@@ -29,6 +33,7 @@ loginForm = new FormGroup({
         response => {
           console.log('Accesso effettuato:', response);
           // Puoi gestire la risposta qui
+          this.isLogged=true;
         },
         error => {
           console.error('Errore durante il login:', error);
