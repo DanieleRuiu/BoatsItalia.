@@ -33,6 +33,7 @@ loginForm = new FormGroup({
         response => {
           console.log('Accesso effettuato:', response);
           // Puoi gestire la risposta qui
+          this.authService.isLogged.next(true)
           this.isLogged=true;
         },
         error => {

@@ -12,8 +12,11 @@ import { SellerComponent } from './pages/seller/seller.component';
 import { SellerAnnouncementComponent } from './pages/seller-announcement/seller-announcement.component';
 import { BuyerAnnouncementComponent } from './pages/buyer-announcement/buyer-announcement.component';
 import { Error404Component } from './pages/error-404/error-404.component';
+import { DetailComponent } from './pages/detail/detail.component';
+
 const routes: Routes = [
   { path: 'home', component: HomepageComponent },
+  { path: 'detail/:id', component: DetailComponent},
   { path: 'account-settings', component: AccountSettingsComponent },
   { path: 'favourites', component: FavouritesComponent },
   { path: 'login', component: LoginComponent },
@@ -22,9 +25,9 @@ const routes: Routes = [
   { path: 'search', component: SearchComponent },
   { path: 'seller', component: SellerComponent },
   { path: 'seller-announcement', component: SellerAnnouncementComponent },
-  { path: 'buyer-announcement', component: BuyerAnnouncementComponent},
+
   { path: '404', component: Error404Component },
-  { path: '**', redirectTo: '404' }
+  { path: '**', redirectTo: 'home' }
 ];
 
 @NgModule({

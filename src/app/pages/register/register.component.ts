@@ -45,6 +45,7 @@ isRegistered=false;
         console.log('Risposta ricevuta:', response);
         //this.router.navigate(['/login']);
         this.isRegistered=true;
+        this.authService.isLogged.next(true);
       },
       (error) => {
         console.error('Errore durante la richiesta:', error);

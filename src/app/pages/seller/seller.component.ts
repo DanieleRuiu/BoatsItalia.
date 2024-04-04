@@ -2,6 +2,7 @@ import { AuthService } from './../../auth.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-seller',
@@ -21,7 +22,7 @@ export class SellerComponent {
     email:['', Validators.required ]
   })
 
-  constructor(private http: HttpClient, private authService: AuthService, private fb: FormBuilder) {
+  constructor(private http: HttpClient, private authService: AuthService, private fb: FormBuilder, private router: Router) {
     console.log('🚀 ~ SellerComponent ~ authService:', authService);
   }
 
@@ -42,7 +43,11 @@ export class SellerComponent {
 
     const token = localStorage.getItem('token');
 
-    this.http
+this.authService.createAnnouncement(announcement).subscribe(res=>{
+  this.router.navigateByUrl('/home')
+})
+
+    /*this.http
       .post('http://localhost:8080/announcements', announcement, {
         headers: new HttpHeaders({
           Authorization: token || '',
@@ -51,12 +56,13 @@ export class SellerComponent {
       })
       .subscribe(
         (response) => {
+          this.router.navigateByUrl('/home')
           console.log('Risposta ricevuta:', response);
         },
         (error) => {
           console.error('Errore durante la richiesta:', error);
           console.error("Errore durante la creazione dell'annuncio:", error);
         }
-      );
+      );*/
   }
 }

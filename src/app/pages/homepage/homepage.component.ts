@@ -5,6 +5,7 @@ import { __decorate } from "tslib"; // Import the tslib module
 import { Advertisment } from '../../models/advertisment.model';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
@@ -26,7 +27,16 @@ this.service.getAllAnnouncement().subscribe(res=>{
   }
 
   goToDetail(id:number){
-this.router.navigateByUrl('/buyer-announcement', {state:{id:id}})
+    console.log('QUI id '+id)
+    this.router.navigateByUrl('/detail/'+id)
+  }
+
+  search(title:any){
+this.service.searchByTitle(title).subscribe(
+  res=>{
+    this.cards=res;
+  }
+)
   }
 
 }

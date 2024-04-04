@@ -1,8 +1,9 @@
 
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
-import {Observable, map} from 'rxjs';
+import {BehaviorSubject, Observable, map} from 'rxjs';
 import { Advertisment } from './models/advertisment.model';
+import { User } from './models/user.model';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,19 @@ export class AuthService {
 
    #authToken: string | undefined; // using # in order to declare a strictly private property
 
-  constructor(private http: HttpClient) { }
+   isLogged : BehaviorSubject<boolean> = new BehaviorSubject(false);
+
+  constructor(private http: HttpClient) {
+
+      let string = localStorage.getItem('userData')
+      console.log(string)
+      if(string!=null){
+        this.isLogged.next(true);
+      }else{
+        this.isLogged.next(false);
+      }
+
+   }
 
   public headers: HttpHeaders = new HttpHeaders();
 
@@ -22,7 +35,12 @@ export class AuthService {
       'Content-Type': 'application/json'
     });
 
-    return this.http.post ('http://localhost:8080/auth/register', user, {headers: headers});
+    return this.http.post('http://localhost:8080/api/users', user, {headers: headers}).pipe(
+      map(res=>{
+        console.log(res)
+        localStorage.setItem('userData', JSON.stringify(res))
+      })
+    );
 }
 
 
@@ -32,23 +50,29 @@ login(email: string, password: string): Observable<any> {
   });
   const body = JSON.stringify({ email, password });
 
-  const response = this.http.post<any>('http://localhost:8080/auth/login', body, { headers });
+  const response = this.http.post<any>('http://localhost:8080/api/users/login', body, { headers });
   response.subscribe(
     (data) => {
-      console.log("🚀 ~ AuthService ~ login ~ data:", data)
-      this.#authToken = data.accessToken;
-      console.log("🚀 ~ AuthService ~ login ~ this.#authToken:", this.#authToken)
-      localStorage.setItem('token', `Bearer ${this.#authToken || ''}`);
+
+      localStorage.setItem('userData', JSON.stringify(data))
    });
   return response;
 }
 
-announcement (announcement: any): Observable<any> {
+createAnnouncement (announcement: any): Observable<any> {
+
+let stringUser = localStorage.getItem('userData')
+let user: User = new User(stringUser);
+
   const headers = new HttpHeaders({
-    'Authorization': this.#authToken || '',
+    'Authorization': 'Bearer '+user.token,
     'Content-Type': 'application/json'
   });
-  return this.http.post('http://localhost:8080/announcement', announcement, { headers });
+  return this.http.post('http://localhost:8080/admin', announcement, { headers }).pipe(
+    map(res=>{
+      return res
+    })
+    );
 
 }
 
@@ -79,6 +103,15 @@ getAnnouncementById(id:number): Observable<Advertisment>{
     //console.log('res',res)
 
   }))
+}
+
+searchByTitle(title:string): Observable<Advertisment[]>{
+  return this.http.post<Advertisment[]>('http://localhost:8080/announcements/search', title).pipe(
+    map(res=>{
+
+      return res.map(ad=>new Advertisment(JSON.stringify(ad)))
+    })
+  )
 }
 
   }

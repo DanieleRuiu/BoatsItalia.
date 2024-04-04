@@ -1,15 +1,20 @@
 
 <h3>Inizia la tua ricerca</h3>
-<form >
+<!--<form >-->
   <div class="search-container">
     <div class="search-input-container">
       <label class="search-label" for="search-input">Cerca:</label>
-      <input type="search" id="search-input" class="search-input" placeholder="Inserisci le caratteristiche desiderate">
+      <input #title type="search" id="search-input" class="search-input" placeholder="Inserisci le caratteristiche desiderate">
     </div>
-    <button class="search-button">Cerca</button>
+    <button class="search-button" (click)="search(title.value)" >Cerca</button>
   </div>
 
+  <div *ngFor="let item of list">
+  {{item.title}}
+  <button (click)="goToDetail(item.id)">Vedi dettaglio</button>
+  </div>
 
+<!--
   <div class="filter-item">
     <label for="category">Categoria:</label>
     <select id="category">
@@ -46,3 +51,5 @@
   <button class="filter-button">Applica filtri</button>
 
 </form>
+-->
+

@@ -2,18 +2,19 @@
   <p class="title">Trova o vendi la tua barca, concludi il tuo affare e goditi il mare di offerte!</p>
   <hr class="separation-line">
   <h5 class="section-title">Seleziona la categoria e inizia la tua ricerca</h5>
-  <form>
-    <input autofocus="" type="text" id="search-input" name="src" class="search__input js-search-input tt-input"
+
+    <input #title autofocus="" type="text" id="search-input" name="src" class="search__input js-search-input tt-input"
       placeholder="Che cosa stai cercando?  «Motoscafo» o  «Yacht a vela classico»" autocomplete="off"
       spellcheck="false" dir="auto" style="position: relative; vertical-align: top;" aria-owns="search-input_listbox"
       role="combobox" aria-autocomplete="list" aria-expanded="true">
-    <button type="submit" class="search__button button button--primary js-search-action">
+    <button  class="search__button button button--primary js-search-action" (click)="search(title.value)">
       <span class="icon icon--search-dark"></span>
       <span class="search__button-text">
         <i class="bi bi-search"></i>
       </span>
     </button>
-  </form>
+
+
 
   <div class="row mt-3">
     <div class="col-md-2">
@@ -104,7 +105,7 @@
       <h5 class="card-advertise-price">Prezzo {{card.price}}</h5>
 
 
-      <button (click)="goToDetail(card.id)" class="btn btn-primary">Vai all'annuncio</button>
+      <button (click)="goToDetail(card.id)"  class="btn btn-primary">Vai all'annuncio</button>
       <i class="bi bi-heart icon m-3"></i>
     </div>
   </div>
